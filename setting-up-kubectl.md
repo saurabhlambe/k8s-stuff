@@ -1,3 +1,5 @@
+This tutorial is a guidebook on installing kubectl on CentOS 8
+
 1. Remove all existing docker packages:
 ```bash
 # sudo yum remove docker \
