@@ -38,7 +38,7 @@ su $USER
 ```
 Here $USER is saurabhlambe
 
-6.1. The below command will throw an error since $USER is not part of the docker group:
+>The below command will throw an error since $USER is not part of the docker group:
 ```bash
 minikube start --driver=docker
  minikube v1.19.0 on Centos 8.3.2011
