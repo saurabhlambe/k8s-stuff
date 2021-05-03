@@ -1,7 +1,7 @@
 This tutorial is a guidebook on installing kubectl on CentOS 8
 
 # Install Docker
-Run this [script](https://gitlab.com/saurabhlambe/scripts/-/blob/74d3f23a26ab78b0a8defbe3f52377285de912d6/install_docker_centos.sh) to install Docker
+Run this [script](https://gitlab.com/saurabhlambe/scripts/-/blob/74d3f23a26ab78b0a8defbe3f52377285de912d6/install_docker_centos.sh) to install Docker.
 
 OR
 
