@@ -70,7 +70,7 @@ exclude=kubelet kubeadm kubectl
 EOF
 ```
 
-8. Install kubeadm, kubelet, kubectl (all machines
+8. Install `kubeadm`, `kubelet`, `kubectl` (all machines)
 ```bash
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 sudo systemctl enable --now kubelet
@@ -80,8 +80,8 @@ sudo systemctl enable --now kubelet
 ```bash
 sudo kubeadm init
 ```
-Copy the _kubeadm join_ command. We will need it later while configuring the worker nodes.
-To make kubectl work for your non-root user, run these commands, which are also part of the kubeadm init output:
+Copy the `kubeadm join` command. We will need it later while configuring the worker nodes.
+To make `kubectl` work for your non-root user, run these commands, which are also part of the kubeadm init output:
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -94,7 +94,7 @@ kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 kubectl get pods -A
 ```
 
-11. Generate the _kubeadm join_ command (OPTIONAL)
+11. Generate the `kubeadm join` command (OPTIONAL)
 ```bash
 kubeadm token create --print-join-command
 ```
