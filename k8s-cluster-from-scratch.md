@@ -81,7 +81,7 @@ sudo systemctl enable --now kubelet
 sudo kubeadm init
 ```
 Copy the `kubeadm join` command. We will need it later while configuring the worker nodes.
-To make `kubectl` work for your non-root user, run these commands, which are also part of the kubeadm init output:
+To make `kubectl` work for your non-root user, run these commands, which are also part of the `kubeadm init` output:
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
