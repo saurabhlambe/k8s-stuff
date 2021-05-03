@@ -101,7 +101,7 @@ kubectl version
 # Install and verify the Calico [network add-on](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network) and containers
 ```bash
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
-kubectl get pods -n kube-system
+kubectl get pods -A
 ```
 
 # On each of the worker nodes, execute the 'kubeadm join' command you got from the init command above
