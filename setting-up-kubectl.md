@@ -1,40 +1,15 @@
 This tutorial is a guidebook on installing kubectl on CentOS 8
 
-1. Remove all existing docker packages:
-```bash
-# sudo yum remove docker \
->                   docker-client \
->                   docker-client-latest \
->                   docker-common \
->                   docker-latest \
->                   docker-latest-logrotate \
->                   docker-logrotate \
->                   docker-engine
-```
+# Install Docker
+Run this [script](https://gitlab.com/saurabhlambe/scripts/-/blob/74d3f23a26ab78b0a8defbe3f52377285de912d6/install_docker_centos.sh) to install Docker
 
-2. Install prerequisites
-```bash
-yum install -y yum-utils
-```
-3. Create docker repo
-```bash
-yum-config-manager \
->     --add-repo \
->     https://download.docker.com/linux/centos/docker-ce.repo
-```
+OR
 
-4. Install docker
-```bash
-yum install docker-ce docker-ce-cli containerd.io
-```
+Follow the official Docker [documentation](https://docs.docker.com/engine/install/centos/).
 
-5. Initialize docker
-```bash
-systemctl enable docker
-systemctl start docker
-```
+# Install and set up minikube
 
-6. Switch to non-root user to initialize minikube
+## 1. Switch to non-root user to initialize minikube
 ```bash
 su $USER
 ```
@@ -50,17 +25,17 @@ minikube start --driver=docker
  Documentation: https://docs.docker.com/engine/install/linux-postinstall/
 ```
 
-7. Add the $USER to docker group:
+## 2. Add the $USER to docker group:
 ```bash
 sudo usermod -aG docker saurabhlambe && newgrp docker
 ```
 
-8. Start a cluster using the docker driver:
+## 3. Start a cluster using the docker driver:
 ```bash
 minikube start --driver=docker
 ```
 
-9. If kubectl is installed, run this command to list all the pods running currently:
+# If kubectl is installed, run this command to list all the pods running currently:
 ```bash
 kubectl get po -A
 ```
