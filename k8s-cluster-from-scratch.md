@@ -1,6 +1,6 @@
 In this tutorial, I will set up a Kubernetes cluster on top of 3 nodes (1 control-plane and 2 worker nodes).
 
-Execute all steps except 9, 10, and 11 on ALL nodes. Steps 9-11 are to be executed only on the ControlPlane node.
+*Note: Execute all steps except 9, 10, and 11 on ALL nodes. Steps 9-11 are to be executed only on the ControlPlane node.*
 
 1. Edit /etc/hosts so that it contains the hostname entries of all the nodes
 ```bash
